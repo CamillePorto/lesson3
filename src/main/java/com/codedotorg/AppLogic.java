@@ -65,12 +65,13 @@ public class AppLogic {
      */
     public void removeProductFromCart() {
         Product selectedProduct = store.getProductsListView().getSelectionModel().getSelectedItem();
-
-
-
-
-
+        removeProductFromCart(selectedProduct);
     }
+
+    private void removeProductFromCart(Product product) {
+        cart.remove(product);
+    }
+
 
     /**
      * Returns the new total of all products in the cart
